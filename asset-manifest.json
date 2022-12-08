@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-reg-form/static/css/main.98dc6626.css",
+    "main.js": "/react-reg-form/static/js/main.d7496875.js",
+    "index.html": "/react-reg-form/index.html",
+    "main.98dc6626.css.map": "/react-reg-form/static/css/main.98dc6626.css.map",
+    "main.d7496875.js.map": "/react-reg-form/static/js/main.d7496875.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98dc6626.css",
+    "static/js/main.d7496875.js"
+  ]
+}
