@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Step1, Step2, Step3, Step4, Step5, RegEnd} from './components/export';
 
 function App() {
-  const [page, setPage] = useState(1);
 
+  const [page, setPage] = useState(1);
   const [isLight, setIsLight] = useState(true);
 
   const [email, setEmail] = useState('');
@@ -54,8 +54,26 @@ function App() {
       <h2 className={`mt-10 text-xl ${ended ? 'hide' : 0}`}>Реєстрація (Крок {page}):</h2>
 
       <Routes>
-        <Route path="/" element={!ended ? <Step1 email={email} setEmail={setEmail} password={password} setPassword={setPassword}/> : <RegEnd/>}/>
-        <Route path="/1" element={!ended ? <Step1 email={email} setEmail={setEmail} password={password} setPassword={setPassword}/> : <RegEnd/>}/>
+        <Route path="*" element={!ended ? 
+          <Step1
+            setPage={setPage} 
+            email={email} 
+            setEmail={setEmail} 
+            password={password} 
+            setPassword={setPassword}
+            /> : 
+          <RegEnd/>
+        }/>
+        <Route path="/1" element={!ended ? 
+          <Step1
+            setPage={setPage} 
+            email={email} 
+            setEmail={setEmail} 
+            password={password} 
+            setPassword={setPassword}
+          /> : 
+          <RegEnd/>
+        }/>
 
         <Route path="/2" element={!ended ? 
           <Step2 

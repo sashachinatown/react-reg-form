@@ -1,7 +1,9 @@
 import React from 'react';
 import { useEffect } from 'react';
 
-const Step1 = ({email, setEmail, password, setPassword}) => {
+const Step1 = ({setPage, email, setEmail, password, setPassword}) => {
+  useEffect(() => setPage(1));
+  
   const handleEmail = (e) => {
     setEmail(e.currentTarget.value);
   }
